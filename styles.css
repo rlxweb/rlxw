@@ -25,7 +25,7 @@ body::after {
   bottom: 0;
   background: 
     linear-gradient(to top, rgba(0, 0, 0, 1), rgba(1, 0, 0, 0)),
-    url('lxpr.png');
+    url('lxpr.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.5;
