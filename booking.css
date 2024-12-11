@@ -188,7 +188,12 @@
   width: 90%;
 
  }
+ .booking-content form
+ {
+  width: 100%;
 
+
+ }
 }
 
 textarea {
