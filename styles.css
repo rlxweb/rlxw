@@ -17,6 +17,7 @@ body {
 }
 
 body::after {
+
   content: "";
   position: absolute;
   top: 0;
@@ -28,7 +29,7 @@ body::after {
     url('lxpr.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: -1;
   filter: blur(3px);
   transition: background-position 0.1s ease-in-out;
@@ -46,6 +47,7 @@ body::after {
 }
 
 header {
+  
   margin-bottom: 20px;
 }
 
@@ -231,13 +233,21 @@ footer {
 .social-icon:hover {
   color: #fff;
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #bible-verse {
-  padding-top: 29px;
   font-family: 'Roboto Slab', serif;
   font-style: italic;
   font-size: 1.0em;
   color: #FFFFFFDD;
+  opacity: 0; /* Initially hide the element */
+  animation: fadeIn 2s ease-out forwards; /* Apply the fade-in animation */
   transition: color 0.3s ease;
 }
 
@@ -324,6 +334,7 @@ footer {
 
   .container {
     max-width: 90%;
+    height: 100vh;
   }
 
   .link-list {
