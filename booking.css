@@ -43,8 +43,9 @@
   padding: 30px;
   background: #00000000;
   border-radius: 10px;
-  max-height: calc(100vh - 100px);
+  max-height: calc(100vh - 50px);
   overflow-y: auto; /* Makes the content scrollable if it exceeds the max height */
+  max-width: 600px;
 }
 
 .booking-content h2 {
@@ -57,7 +58,7 @@
 .booking-content p {
   font-size: 1.2em;
   color: #000;
-  max-width: 770px;
+  max-width: 700px;
 }
 
 /* Form container */
