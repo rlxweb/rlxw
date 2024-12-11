@@ -128,7 +128,7 @@
 
       <div class="form-group">
         <label for="message">Cuéntanos sobre ti y tu evento*</label>
-        <textarea id="message" name="message" rows="5" placeholder="Hola, mi nombre es... fecha y lugar es..." required maxlength="1500"></textarea>
+        <textarea id="message" name="message" rows="5" placeholder="Hola, mi nombre es... nuestro evento es en las fechas y ubicaciones." required maxlength="1500"></textarea>
         <div id="char-count">Quedan 1500 caracteres</div>
       </div>
 
@@ -232,6 +232,18 @@ const form = document.getElementById('booking-form');
       }
     } catch (error) {
       alert('An error occurred. Please check your internet connection and try again.');
+    }
+  });
+
+  form.addEventListener('submit', function (event) {
+    const email = document.getElementById('email').value;
+    
+    // A more comprehensive regex to validate emails
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailRegex.test(email)) {
+      event.preventDefault();
+      alert('Please enter a valid email address.');
     }
   });
 </script>
