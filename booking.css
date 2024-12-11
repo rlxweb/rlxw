@@ -100,7 +100,7 @@
 
 /* Styling for the larger message textarea */
 .booking-content textarea {
-  height: 250px;
+  height: 200px;
   width: 400px;
   resize: none;
 }

@@ -58,10 +58,10 @@
         <i class="fab fa-tiktok"></i> Tiktok
       </a>
       <!--Mmmmm? coming soon?-->
-      <!--<a href="#" id="bookings-button" class="link-item bookings">
-        <i class="fas fa-ticket-alt"></i> Booking
+      <a href="#" id="bookings-button" class="link-item bookings">
+        <i class="fas fa-ticket-alt"></i> Bookings
       </a>
-       <a href="#" class="link-item">
+      <!-- <a href="#" class="link-item">
         <i class="fas fa-tshirt"></i> aaa 
       </a>-->
       </div>
@@ -89,7 +89,7 @@
     <p>¡Dios te bendiga!</br> Favor completar los datos y nos pondremos en contacto contigo tan pronto sea posible.</p>
 
     <!-- Booking Form -->
-    <form id="booking-form" action="submit-booking.php" method="POST">
+    <form id="booking-form" action="https://formspree.io/f/xkgnakzn" method="POST" data-redirect="thankyoubooking.html">
 
      <div class="form-container">
   <div class="form-group">
@@ -111,7 +111,13 @@
 
       <div class="form-group">
         <label for="phone">Teléfono de contacto*</label>
-        <input type="tel" id="phone" name="phone" required />
+        <input type="tel" id="phone" name="phone" type="tel" 
+    id="phone" 
+    name="phone" 
+    required 
+    pattern="^[0-9]{8,}$"
+    title="Please enter at least 8 digits, no letters." 
+    placeholder="e.g. 12345678" required />
       </div>
       </div>
 
@@ -121,10 +127,13 @@
       </div>
 
       <div class="form-group">
-        <label for="message">Cuéntanos sobre ti y tu evento.</label>
+        <label for="message">Cuéntanos sobre ti y tu evento*</label>
         <textarea id="message" name="message" rows="5" placeholder="Hola, mi nombre es... fecha y lugar es..." required maxlength="1500"></textarea>
         <div id="char-count">Quedan 1500 caracteres</div>
       </div>
+
+      <div class="g-recaptcha" data-sitekey="6Lc5CpkqAAAAANbaDi9bmtBsJDs_IL-UR_1PuBlP"></div>
+
       <button type="submit" class="submit-button">Enviar datos</button>
     </form>
   </div>
@@ -137,6 +146,8 @@
 </div>
     </footer>
   </div>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 <script>
   function openLinkInNewTab(event) {
@@ -158,6 +169,7 @@
 const bookingsButton = document.getElementById('bookings-button');
 const bookingPage = document.getElementById('booking-page');
 const closeButton = document.getElementById('close-button');
+const submitButton = document.getElementById('submit');
 
 // Message
 const messageInput = document.getElementById('message');
@@ -175,6 +187,10 @@ closeButton.addEventListener('click', () => {
   bookingPage.classList.remove('open');
 });
 
+submitButton.addEventListener('click', () => {
+  bookingPage.classList.remove('open');
+});
+
 // Optional: Close the booking page when clicking outside of the content
 /*bookingPage.addEventListener('click', (e) => {
   if (e.target === bookingPage) {
@@ -188,6 +204,36 @@ messageInput.addEventListener('input', function() {
   const remainingChars = maxLength - currentLength;
   charCountDisplay.textContent = `Quedan ${remainingChars} caracteres`;
 });
+
+
+const form = document.getElementById('booking-form');
+
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    const formData = new FormData(form);
+
+    try {
+      // Send the form data using Fetch API
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (response.ok) {
+        // Clear the form fields
+        form.reset();
+
+        // Redirect to the thank-you page
+        window.location.href = form.dataset.redirect;
+      } else {
+        alert('Oops! Something went wrong. Please try again.');
+      }
+    } catch (error) {
+      alert('An error occurred. Please check your internet connection and try again.');
+    }
+  });
 </script>
 </body>
 </html>
