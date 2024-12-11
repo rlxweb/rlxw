@@ -66,7 +66,7 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  width: 400px;
+  max-width: 400px;
   padding-top: 25px;
   margin: 0 auto;
 }
@@ -180,6 +180,13 @@
   font-size: 0.9em;
   color: #888;
   margin-top: 5px;
+}
+
+@media (max-width: 300px) {
+ textarea {
+  width: 100%;
+
+ }
 }
 
 textarea {
