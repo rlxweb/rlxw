@@ -1,0 +1,198 @@
+/* Booking page container */
+.booking-page {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFFFF;
+  transition: transform 0.5s ease-out;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Close button style */
+.close-button {
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  color: black;
+  border: none;
+  font-size: 4.5em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: inline-block; /* Ensures the text behaves like a block */
+  transform: rotate(45deg); /* Rotate the text 45 degrees */
+  transform-origin: center; /* Optional: ensures the rotation happens around the center of the text */
+  transition: transform 0.3s ease-out;
+ user-select: none;
+}
+
+/* Change color on hover */
+.close-button:hover {
+  color: #2F8F5C; /* Change color when hovered */
+    display: inline-block; /* Ensures the text behaves like a block */
+  transform: rotate(135deg); /* Rotate the text 45 degrees */
+  transform-origin: center; /* Optional: ensures the rotation happens around the center of the text */
+  transition: transform 0.3s ease-out;
+
+}
+
+/* Content inside the booking page */
+.booking-content {
+  text-align: center;
+  padding: 30px;
+  background: #00000000;
+  border-radius: 10px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto; /* Makes the content scrollable if it exceeds the max height */
+}
+
+.booking-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+}
+
+.booking-content p {
+  font-size: 1.2em;
+  color: #000;
+  max-width: 770px;
+
+}
+
+/* Form container */
+.booking-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 400px;
+  padding-top: 25px;
+  margin: 0 auto;
+}
+
+/* Style each input field */
+.booking-content input,
+.booking-content textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  border-color: #00000000;
+
+  background-color: #00000010;
+  color: #000;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus styles for inputs */
+.booking-content input:focus,
+.booking-content textarea:focus {
+  border-color: #00000088; /* Highlight on focus */
+  outline: none;
+}
+
+/* Styling for the larger message textarea */
+.booking-content textarea {
+  height: 250px;
+  width: 400px;
+  resize: none;
+}
+
+/* Label styling */
+.booking-content label {
+  text-align: left;
+  width: 100%;
+  font-size: 1.1em;
+  color: #000;
+  margin-bottom: 5px;
+}
+
+/* Button styling */
+.booking-content button {
+  padding: 12px 20px;
+  background-color: #2F8F5C;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.booking-content button:hover {
+  background-color: #3FAF75;
+  transform: scale(1.05);
+}
+
+/* Placeholder text styling */
+.booking-content input::placeholder,
+.booking-content textarea::placeholder {
+  color: #aaa;
+}
+
+/* Optional: add spacing between the form and footer */
+.booking-content footer {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #aaa;
+}
+
+/* Show the page with animation */
+.booking-page.open {
+  transform: translateX(-100%);
+}
+
+/* Container to hold form groups together */
+.form-container {
+  display: flex;
+  gap: 20px; /* Space between the form groups */
+}
+
+/* Each form group */
+.form-group {
+  display: flex;
+  flex-direction: column; /* Keep the label and input stacked vertically */
+  flex: 1; /* Distribute space equally */
+}
+
+/* Input styling */
+.form-group input {
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  border-color: #00000000;
+}
+
+/* Label styling */
+.form-group label {
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+#char-count {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  resize: vertical; /* Optional: allows vertical resizing */
+}
+
+textarea:focus {
+  border-color: #2F8F5C; /* Change border color when focused */
+}

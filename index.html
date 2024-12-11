@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lexerr</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="booking.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <!-- Link to Google Fonts for Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+
+  <!-- Standard favicon -->
+  <link rel="icon" href="path/to/your/favicon.ico" sizes="16x16" type="image/x-icon">
+
+  <!-- PNG favicon for retina displays -->
+  <link rel="icon" href="path/to/your/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <!--  Apple touch icon (used on iOS) -->
+  <link rel="apple-touch-icon" href="path/to/your/apple-touch-icon.png">
+
+  <!-- Android devices -->
+  <link rel="icon" href="path/to/your/favicon-48x48.png" sizes="48x48" type="image/png">
+</head>
+<body>
+  <!-- Background element that will move based on mouse position -->
+  <div id="parallax-background"></div>
+
+  <div class="container">
+    <header>
+      <img src="lxpr.png" alt="Profile Image" class="profile-img">
+      <h1>Lexerr</h1>
+      <p class="bio">- Todo siempre con love <3 - </p>
+    </header>
+
+    <main>
+      <div class="link-list">
+        <a href="https://open.spotify.com/intl-es/artist/1pC7dIJIvxuSZCT6och2ir?si=Mgw19g8BSfG_phiDdjba5Q" class="link-item spotify" onclick="openLinkInNewTab(event)">
+        <i class="fab fa-spotify" ></i> Spotify
+      </a>
+      <a href="https://www.youtube.com/watch?v=pF88xqv0EP4" class="link-item youtube" onclick="openLinkInNewTab(event)">
+        <i class="fab fa-youtube"></i> De camino
+      </a>
+      <a href="https://music.apple.com/do/artist/lexerr/1632806061" class="link-item apple-music" onclick="openLinkInNewTab(event)">
+        <i class="fab fa-apple"></i> Apple Music
+      </a>
+      <a href="https://www.youtube.com/channel/UC-scRi5zgr9JSl_7_Bf7J8Q" onclick="openLinkInNewTab(event)" class="link-item youtube">
+        <i class="fab fa-youtube"></i> Youtube
+      </a>
+
+      <!--Mmmmm? coming soon?-->
+      <!--<a href="#" id="bookings-button" class="link-item bookings">
+        <i class="fas fa-ticket-alt"></i> Booking
+      </a>
+       <a href="#" class="link-item">
+        <i class="fas fa-tshirt"></i> Xycal 
+      </a>-->
+      </div>
+    </main>
+
+    <div class="social-icons">
+      <a href="https://www.youtube.com/channel/UC-scRi5zgr9JSl_7_Bf7J8Q" class="social-icon youtube" >
+        <i class="fab fa-youtube social-icon-img"></i>
+      </a>
+      <a href="https://open.spotify.com/intl-es/artist/1pC7dIJIvxuSZCT6och2ir?si=Mgw19g8BSfG_phiDdjba5Q" class="social-icon spotify">
+        <i class="fab fa-spotify social-icon-img" ></i>
+      </a>
+      <a href="https://www.instagram.com/_lexerr/" class="social-icon instagram">
+        <i class="fab fa-instagram social-icon-img"></i>
+      </a>
+      <a href="https://www.tiktok.com/@notlexerr" class="social-icon tiktok">
+        <i class="fab fa-tiktok social-icon-img"></i>
+      </a>
+    </div>
+
+   <div id="booking-page" class="booking-page">
+  <button id="close-button" class="close-button">+</button>
+  <div class="booking-content">
+    <h2>¡Book Lexerr para tu evento!</h2>
+    <p>¡Dios te bendiga!</br> Favor completar los datos y nos pondremos en contacto contigo tan pronto sea posible.</p>
+
+    <!-- Booking Form -->
+    <form id="booking-form" action="submit-booking.php" method="POST">
+
+     <div class="form-container">
+  <div class="form-group">
+    <label for="first-name">Nombre*</label>
+    <input type="text" id="first-name" name="first-name" required />
+  </div>
+
+  <div class="form-group">
+    <label for="last-name">Apellidos*</label>
+    <input type="text" id="last-name" name="last-name" required />
+  </div>
+</div>
+     <div class="form-container">
+
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Teléfono de contacto*</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+      </div>
+
+      <div class="form-group">
+        <label for="social">Cuenta red social.</label>
+        <input type="text" id="social" name="social" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Cuéntanos sobre ti y tu evento.</label>
+        <textarea id="message" name="message" rows="5" placeholder="Hola, mi nombre es... fecha y lugar es..." required maxlength="1500"></textarea>
+        <div id="char-count">Quedan 1500 caracteres</div>
+      </div>
+      <button type="submit" class="submit-button">Enviar datos</button>
+    </form>
+  </div>
+</div>
+
+    <!-- Bible Verse Section -->
+    <footer>
+      <div id="bible-verse">
+  <strong>Josué 1:9</strong>: Mira que te mando que te esfuerces y seas valiente;<br>no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.
+</div>
+    </footer>
+  </div>
+
+<script>
+  function openLinkInNewTab(event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    
+    const url = event.target.href; // Get the URL from the clicked link
+    
+    // Open the link in a new tab
+    const newTab = window.open(url, '_blank');
+    
+    // Focus on the new tab
+    if (newTab) {
+      newTab.focus();
+    }
+  }
+
+
+  // Get the elements
+const bookingsButton = document.getElementById('bookings-button');
+const bookingPage = document.getElementById('booking-page');
+const closeButton = document.getElementById('close-button');
+
+// Message
+const messageInput = document.getElementById('message');
+const charCountDisplay = document.getElementById('char-count');
+const maxLength = messageInput.getAttribute('maxlength');
+
+
+// When clicking the bookings button
+bookingsButton.addEventListener('click', (e) => {
+  e.preventDefault();  // Prevent default link behavior
+  bookingPage.classList.add('open');  // Add the class to trigger animation
+});
+
+closeButton.addEventListener('click', () => {
+  bookingPage.classList.remove('open');
+});
+
+// Optional: Close the booking page when clicking outside of the content
+/*bookingPage.addEventListener('click', (e) => {
+  if (e.target === bookingPage) {
+    bookingPage.classList.remove('open');
+  }
+});*/
+
+
+messageInput.addEventListener('input', function() {
+  const currentLength = messageInput.value.length;
+  const remainingChars = maxLength - currentLength;
+  charCountDisplay.textContent = `Quedan ${remainingChars} caracteres`;
+});
+</script>
+</body>
+</html>

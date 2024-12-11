@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(1, 0, 0, 0)),
+    url('lxpr.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+  filter: blur(3px); /* Apply the blur effect here */
+  transition: background-position 0.1s ease-in-out; /* Smooth background transition */
+  will-change: background-position; /* Hint to the browser to optimize performance */
+}
+
+.container {
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+    user-select: none; /* Prevents text selection */
+  -webkit-user-drag: none; /* Prevents dragging in Safari */
+  -moz-user-drag: none; /* Prevents dragging in Firefox */
+  -ms-user-drag: none; /* Prevents dragging in IE */
+  user-drag: none; /* Prevents dragging in most browsers */
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-family: 'Dancing Script', serif;
+  font-size: 1.9em;
+  color: #CCC;
+}
+
+.link-list {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+ user-select: none;
+ 
+}
+
+.link-item {
+  display: flex;
+  align-items: center; /* Align icon and text vertically */
+  color: white;
+  padding: 15px 20px; /* Adjust padding for better spacing */
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-size: 1.1em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  background-color: #FFFFFF20; /* Keep consistent background */
+  backdrop-filter: blur(8px);
+  overflow: hidden; /* Ensures the fill effect stays inside the button */
+  -webkit-backdrop-filter: blur(8px);
+  width: 100%; /* Ensure buttons take full width */
+  transition: transform 0.2s ease, border-color 0.3s ease;
+
+}
+
+.link-item i {
+  margin-right: 10px; /* Space between the icon and text */
+  font-size: 1.3em; /* Adjust icon size to match text */
+
+}
+
+
+.link-item:hover {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(18px);
+  transform: scale(1.05);
+  transition: transform 0.2s ease, border-color 0.3s ease;
+
+}
+
+/* Specific style for the bookings button */
+.link-item.bookings {
+  background-color: #2F8F5C; /* Cool green color */
+  color: #ffffff;
+}
+
+/* Add a pseudo-element for the hover effect */
+.link-item.bookings::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start outside the button */
+  width: 100%;
+  height: 100%;
+  background-color: #3FAF75; /* Hover fill color */
+  transition: left 0.3s ease; /* Smooth fill animation */
+  z-index: -1; /* Keep it behind the text */
+}
+
+/* Hover effect for the bookings button */
+.link-item.bookings:hover::before {
+  left: 0; /* Move the fill from left to right */
+}
+
+.link-item.bookings:hover {
+  color: #ffffff; /* Ensure text remains visible */
+  transform: scale(1);
+
+}
+
+
+/* The hidden booking page (initially off-screen) */
+.booking-page {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.5s ease-out;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Close button style */
+.close-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Change color on hover */
+.close-button:hover {
+  color: #ff6347; /* Change color when hovered */
+}
+
+/* Content inside the booking page */
+.booking-content {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+}
+
+.booking-content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.booking-content p {
+  font-size: 1.2em;
+}
+
+/* Show the page with animation */
+.booking-page.open {
+  transform: translateX(-100%);
+}
+footer {
+  margin-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.social-icon {
+  color: #FFFFFFF9;
+  font-size: 1.3em;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-icon-img {
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #FFFFFF33;
+  justify-content: center;
+  align-items: center;
+  padding-top: 9px;
+  transition: transform 0.2s ease, border-color 0.3s ease;
+}
+
+.social-icon-img:hover {
+  transform: scale(1.15);
+  background-color: #00000000;
+  border: 2px solid #FFFFFF55;
+   border-color: #3FAF75;
+}
+
+.social-icon:hover {
+  color: #fff;
+}
+
+#bible-verse {
+  padding-top: 29px;
+  font-family: 'Roboto Slab', serif;
+  font-style: italic;
+  font-size: 1.0em;
+  color: #FFFFFFDD; /* Initial text color */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+
+}
+
+::selection {
+  background-color: #2F8F5C; /* Green background */
+  color: white; /* White text */
+}
+
+/* For webkit-based browsers like Chrome and Safari */
+::-webkit-selection {
+  background-color: #2F8F5C;
+  color: white;
+}
+
+/* For Firefox */
+::-moz-selection {
+  background-color: #2F8F5C;
+  color: white;
+}
