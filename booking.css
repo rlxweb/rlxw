@@ -39,13 +39,12 @@
 
 /* Content inside the booking page */
 .booking-content {
-  text-align: center;
   padding: 30px;
   background: #00000000;
-  border-radius: 10px;
   max-height: calc(100vh - 50px);
   overflow-y: auto; /* Makes the content scrollable if it exceeds the max height */
-  max-width: 600px;
+  width: 100%;
+
 }
 
 .booking-content h2 {
@@ -58,7 +57,7 @@
 .booking-content p {
   font-size: 1.2em;
   color: #000;
-  max-width: 700px;
+  text-align: center;
 }
 
 /* Form container */
@@ -196,14 +195,6 @@
  }
 }
 
-textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 1em;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  resize: vertical; /* Optional: allows vertical resizing */
-}
 
 textarea:focus {
   border-color: #2F8F5C; /* Change border color when focused */
