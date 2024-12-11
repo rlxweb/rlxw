@@ -94,12 +94,11 @@
 
 /* Styling for the larger message textarea */
 .booking-content textarea {
-  width: 100%;  /* Ensure it maintains default width */
   resize: none;  /* Prevent resizing */
   height: auto;  /* Respect the default height */
   min-height: 200px;  /* Maintain a minimum height */
   max-height: 300px;  /* Optional: add a max height */
-   width: 400px;
+   width: 350px;
   overflow-y: auto;  /* Scroll if content overflows */
 }
 
