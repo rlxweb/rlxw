@@ -46,7 +46,7 @@
 
 <body>
   <div class="background-layer"></div>
-  
+
   <div class="container">
     <header>
       <img src="lxpr.jpg" alt="Profile Image" class="profile-img">
@@ -184,7 +184,7 @@ Nuestro evento es en las fechas y ubicaciones..." required maxlength="1500"></te
   'event_category': 'Button', 
   'event_label': 'Send_booking_data_Button', 
   'value': 1 
-});">Enviar datos</button>
+});">Enviar</button>
     </form>
   </div>
 </div>
@@ -205,11 +205,13 @@ const maxLength = messageInput.getAttribute('maxlength');
 
 const charCountDisplay = document.getElementById('char-count');
 
-messageInput.addEventListener('input', function() {
+function updateCharacterCounter() {
   const currentLength = messageInput.value.length;
   const remainingChars = maxLength - currentLength;
   charCountDisplay.textContent = `Quedan ${remainingChars} caracteres`;
-});
+}
+
+messageInput.addEventListener('input',() =>{updateCharacterCounter();} );
 
 </script>
 
@@ -237,6 +239,7 @@ const bookingPage = document.getElementById('booking-page');
 const closeButton = document.getElementById('close-button');
 const submitButton = document.getElementById('submit');
 const overlay = document.getElementById('overlay');
+const form = document.getElementById('booking-form');
 
 
 function disableScroll() {
@@ -279,6 +282,8 @@ bookingsButton.addEventListener('click', (e) => {
 closeButton.addEventListener('click', () => {
   showScroll();
   bookingPage.classList.remove('open');
+        form.reset();
+updateCharacterCounter();
 });
 
 submitButton.addEventListener('click', () => {
@@ -296,7 +301,6 @@ submitButton.addEventListener('click', () => {
 
 
 
-const form = document.getElementById('booking-form');
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault(); // Prevent default form submission behavior
