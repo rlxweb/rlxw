@@ -310,14 +310,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.2em;
-  }
-
-  .profile-img {
-    width: 100px;
-    height: 100px;
-  }
 
   .bio {
     font-size: 1.2em;
