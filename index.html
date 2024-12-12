@@ -176,7 +176,11 @@ Nuestro evento es en las fechas y ubicaciones..." required maxlength="1500"></te
 
      <div class="h-captcha" data-sitekey="6eeca724-ca1a-43f6-9d0a-ff16cdec9592"></div>
 
-      <button type="submit" class="submit-button">Enviar datos</button>
+      <button type="submit" class="submit-button" onclick="gtag('event', 'click', { 
+  'event_category': 'Button', 
+  'event_label': 'Send_booking_data_Button', 
+  'value': 1 
+});">Enviar datos</button>
     </form>
   </div>
 </div>
