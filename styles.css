@@ -278,9 +278,6 @@ footer {
 @media (max-width: 768px) {
 
 
-  .bio {
-    font-size: 1.5em;
-  }
 
   .link-item {
     font-size: 1em;
@@ -311,9 +308,6 @@ footer {
 
 @media (max-width: 480px) {
 
-  .bio {
-    font-size: 1.2em;
-  }
 
   .link-item {
     font-size: 0.9em;
