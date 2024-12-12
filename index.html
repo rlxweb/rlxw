@@ -44,23 +44,47 @@
 
     <main>
       <div class="link-list">
-        <a href="https://open.spotify.com/intl-es/artist/1pC7dIJIvxuSZCT6och2ir?si=Mgw19g8BSfG_phiDdjba5Q" class="link-item spotify" onclick="openLinkInNewTab(event)">
+        <a href="https://spoti.fi/3Dd5WCb" class="link-item spotify" onclick="openLinkInNewTab(event)" onclick="gtag('event', 'click', { 
+  'event_category': 'Button', 
+  'event_label': 'Spotify button', 
+  'value': 1 
+});">
         <i class="fab fa-spotify" ></i> Spotify
       </a>
-      <a href="https://www.youtube.com/channel/UC-scRi5zgr9JSl_7_Bf7J8Q" onclick="openLinkInNewTab(event)" class="link-item youtube">
+      <a href="https://bit.ly/3VAuQC9" onclick="openLinkInNewTab(event)" class="link-item youtube" onclick="gtag('event', 'click', { 
+  'event_category': 'Button', 
+  'event_label': 'Youtube Button', 
+  'value': 1 
+});">
         <i class="fab fa-youtube"></i> Youtube
       </a>
-      <a href="https://music.apple.com/do/artist/lexerr/1632806061" class="link-item apple-music" onclick="openLinkInNewTab(event)">
+      <a href="https://music.apple.com/do/artist/lexerr/1632806061" class="link-item apple-music" onclick="openLinkInNewTab(event)" onclick="gtag('event', 'click', { 
+  'event_category': 'Button', 
+  'event_label': 'AppleMusic Button', 
+  'value': 1 
+});">
         <i class="fab fa-apple"></i> Apple Music
       </a>
-<a href="https://www.instagram.com/_lexerr/" onclick="openLinkInNewTab(event)" class="link-item youtube">
+<a href="https://www.instagram.com/_lexerr/" onclick="openLinkInNewTab(event)" class="link-item youtube" onclick="gtag('event', 'click', { 
+  'event_category': 'Button', 
+  'event_label': 'Instagram Button', 
+  'value': 1 
+});">
         <i class="fab fa-instagram"></i> Instagram
       </a>
-      <a href="https://www.tiktok.com/@notlexerr" onclick="openLinkInNewTab(event)" class="link-item youtube">
+      <a href="https://www.tiktok.com/@notlexerr" onclick="openLinkInNewTab(event)" class="link-item youtube" onclick="gtag('event', 'click', { 
+  'event_category': 'Button', 
+  'event_label': 'TikTok Button', 
+  'value': 1 
+});">
         <i class="fab fa-tiktok"></i> Tiktok
       </a>
       <!--Mmmmm? coming soon?-->
-      <a href="#" id="bookings-button" class="link-item bookings">
+      <a href="#" id="bookings-button" class="link-item bookings" onclick="gtag('event', 'click', { 
+  'event_category': 'Button', 
+  'event_label': 'Bookings Button', 
+  'value': 1 
+});">
         <i class="fas fa-ticket-alt"></i> Bookings
       </a>
       <!-- <a href="#" class="link-item">
@@ -168,6 +192,13 @@ messageInput.addEventListener('input', function() {
 
 </script>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RG8Y1L71ET"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RG8Y1L71ET');
+</script>
 
 <script>
 
