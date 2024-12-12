@@ -5,7 +5,7 @@
   left: 100%;
   width: 100%;
   height: 100%;
-  background-color: #FFFFFFFF;
+  background-color: #202020;
   transition: transform 0.5s ease-out;
   z-index: 1000;
   display: flex;
@@ -19,7 +19,7 @@
   position: absolute;
   top: 5px;
   left: 15px;
-  color: black;
+  color: white;
   border: none;
   font-size: 4.5em;
   cursor: pointer;
@@ -50,13 +50,13 @@
 .booking-content h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  color: #000;
+  color: #DDDDDD;
   font-family: 'Roboto', sans-serif;
 }
 
 .booking-content p {
   font-size: 1.2em;
-  color: #000;
+  color: #DDDDDD;
   text-align: center;
 } 
 
@@ -79,11 +79,18 @@
   border-radius: 5px;
   border: 2px solid #ccc;
   border-color: #00000000;
-  background-color: #00000010;
-  color: #000;
+  background-color: #313131;
+  color: #CCC;
   font-size: 1em;
   transition: border-color 0.3s ease;
 }
+
+/* Placeholder text styling */
+.booking-content input::placeholder,
+.booking-content textarea::placeholder {
+  color: #666;
+}
+
 
 /* Focus styles for inputs */
 .booking-content input:focus,
@@ -107,7 +114,7 @@
   text-align: left;
   width: 100%;
   font-size: 1.1em;
-  color: #000;
+  color: color: #DDDDDD;
   margin-bottom: 5px;
 }
 
@@ -129,11 +136,6 @@
   transform: scale(1.05);
 }
 
-/* Placeholder text styling */
-.booking-content input::placeholder,
-.booking-content textarea::placeholder {
-  color: #aaa;
-}
 
 /* Optional: add spacing between the form and footer */
 .booking-content footer {
@@ -173,6 +175,7 @@
 .form-group label {
   font-size: 1.1em;
   margin-bottom: 5px;
+  color: #DDDDDD;
 }
 
 #char-count {

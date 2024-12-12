@@ -17,10 +17,8 @@ body {
 }
 
 body::after {
-
   content: "";
   position: absolute;
-
   top: 0;
   left: 0;
   right: 0;
@@ -33,7 +31,6 @@ body::after {
   opacity: 0.3;
   z-index: -1;
   filter: blur(3px);
-  transition: background-position 0.1s ease-in-out;
 }
 
 .container {
