@@ -276,14 +276,7 @@ footer {
 
 /* Media Queries for Smaller Devices */
 @media (max-width: 768px) {
-  h1 {
-    font-size: 1.5em;
-  }
 
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
 
   .bio {
     font-size: 1.5em;
