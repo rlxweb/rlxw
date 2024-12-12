@@ -293,10 +293,6 @@ footer {
     font-size: 0.9em;
   }
 
-  .container {
-    max-width: 100%;
-  }
-
   .link-list {
     width: 90%;
   }
@@ -319,10 +315,6 @@ footer {
     height: 30px;
   }
 
-  .container {
-    max-width: 90%;
-    height: 100vh;
-  }
 
   .link-list {
     width: 80%;
