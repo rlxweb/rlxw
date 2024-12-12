@@ -99,6 +99,10 @@
   outline: none;
 }
 
+form label i {
+  margin-right: 8px; /* Adds spacing between the icon and label text */
+}
+
 /* Styling for the larger message textarea */
 .booking-content textarea {
   resize: none;  /* Prevent resizing */
