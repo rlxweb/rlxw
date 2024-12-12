@@ -8,6 +8,7 @@ body {
   background-color: #121212;
   font-family: 'Roboto', sans-serif;
   color: #fff;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +20,7 @@ body::after {
 
   content: "";
   position: absolute;
+
   top: 0;
   left: 0;
   right: 0;
@@ -251,6 +253,7 @@ footer {
   opacity: 0; /* Initially hide the element */
   animation: fadeIn 2s ease-out forwards; /* Apply the fade-in animation */
   transition: color 0.3s ease;
+  padding-bottom: 50px;
 }
 
 ::selection {
