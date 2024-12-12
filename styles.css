@@ -34,7 +34,6 @@ body::after {
   z-index: -1;
   filter: blur(3px);
   transition: background-position 0.1s ease-in-out;
-  will-change: background-position;
 }
 
 .container {
