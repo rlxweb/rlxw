@@ -95,7 +95,7 @@
 /* Focus styles for inputs */
 .booking-content input:focus,
 .booking-content textarea:focus {
-  border-color: #999; /* Highlight on focus */
+  border-color: #555; /* Highlight on focus */
   outline: none;
 }
 
