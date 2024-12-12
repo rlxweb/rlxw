@@ -276,8 +276,18 @@ footer {
 
 /* Media Queries for Smaller Devices */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 2.0em;
+  }
 
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
 
+  .bio {
+    font-size: 1.5em;
+  }
 
   .link-item {
     font-size: 1em;
@@ -293,6 +303,10 @@ footer {
     font-size: 0.9em;
   }
 
+  .container {
+    max-width: 100%;
+  }
+
   .link-list {
     width: 90%;
   }
@@ -303,7 +317,18 @@ footer {
 }
 
 @media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
 
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .bio {
+    font-size: 1.5em;
+  }
 
   .link-item {
     font-size: 0.9em;
@@ -315,6 +340,10 @@ footer {
     height: 30px;
   }
 
+  .container {
+    max-width: 90%;
+    height: 100vh;
+  }
 
   .link-list {
     width: 80%;
