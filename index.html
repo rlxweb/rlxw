@@ -130,7 +130,9 @@
         <label for="message">Cuéntanos sobre ti y tu evento*</label>
         <textarea id="message" name="message" rows="5" placeholder="Hola, mi nombre es...
 Nuestro evento es en las fechas y ubicaciones..." required maxlength="1500"></textarea>
+
         <div id="char-count">Quedan 1500 caracteres</div>
+
       </div>
 
       <div class="g-recaptcha" data-sitekey="6Lc5CpkqAAAAANbaDi9bmtBsJDs_IL-UR_1PuBlP"></div>
@@ -150,7 +152,26 @@ Nuestro evento es en las fechas y ubicaciones..." required maxlength="1500"></te
 
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+
 <script>
+  // Message
+const messageInput = document.getElementById('message');
+const maxLength = messageInput.getAttribute('maxlength');
+
+
+const charCountDisplay = document.getElementById('char-count');
+
+messageInput.addEventListener('input', function() {
+  const currentLength = messageInput.value.length;
+  const remainingChars = maxLength - currentLength;
+  charCountDisplay.textContent = `Quedan ${remainingChars} caracteres`;
+});
+
+</script>
+
+
+<script>
+
   function openLinkInNewTab(event) {
     event.preventDefault(); // Prevent the default behavior of the link
     
@@ -171,11 +192,6 @@ const bookingsButton = document.getElementById('bookings-button');
 const bookingPage = document.getElementById('booking-page');
 const closeButton = document.getElementById('close-button');
 const submitButton = document.getElementById('submit');
-
-// Message
-const messageInput = document.getElementById('message');
-const charCountDisplay = document.getElementById('char-count');
-const maxLength = messageInput.getAttribute('maxlength');
 
 
 // When clicking the bookings button
@@ -199,12 +215,6 @@ submitButton.addEventListener('click', () => {
   }
 });*/
 
-
-messageInput.addEventListener('input', function() {
-  const currentLength = messageInput.value.length;
-  const remainingChars = maxLength - currentLength;
-  charCountDisplay.textContent = `Quedan ${remainingChars} caracteres`;
-});
 
 
 const form = document.getElementById('booking-form');
