@@ -47,6 +47,10 @@ body::after {
   justify-content: center; /* Ensures the content stays centered vertically */
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 header {
 
   margin-bottom: 20px;

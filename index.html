@@ -193,7 +193,7 @@ Nuestro evento es en las fechas y ubicaciones..." required maxlength="1500"></te
     <!-- Bible Verse Section -->
     <footer>
       <div id="bible-verse">
-  <strong>Josué 1:9</strong>: Mira que te mando que te esfuerces y seas valiente;<br>no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.
+  <strong>Josué 1:9</strong>: Mira que te mando que te esfuerces y seas valiente; no temas ni desmayes, porque Jehová tu Dios estará contigo en dondequiera que vayas.
 </div>
     </footer>
   </div>
@@ -237,19 +237,54 @@ const bookingsButton = document.getElementById('bookings-button');
 const bookingPage = document.getElementById('booking-page');
 const closeButton = document.getElementById('close-button');
 const submitButton = document.getElementById('submit');
+const overlay = document.getElementById('overlay');
+
+
+function disableScroll() {
+// Save the current scroll position
+  const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+  // Measure scrollbar width only once
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+  // Lock the body's position without layout jump
+  document.body.style.overflow = 'hidden';
+
+  // Adjust for missing scrollbar to prevent layout shift
+  if (scrollBarWidth > 0) {
+    document.body.style.paddingRight = `${scrollBarWidth}px`;
+  }
+}
+
+// Hide modal
+function showScroll() {
+  // Retrieve the stored scroll position
+  const scrollPosition = Math.abs(parseInt(document.body.style.top, 10));
+
+  // Reset body styles
+  document.body.style.overflow = '';
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.paddingRight = '';
+}
 
 
 // When clicking the bookings button
 bookingsButton.addEventListener('click', (e) => {
+  disableScroll();
   e.preventDefault();  // Prevent default link behavior
   bookingPage.classList.add('open');  // Add the class to trigger animation
 });
 
+
 closeButton.addEventListener('click', () => {
+  showScroll();
   bookingPage.classList.remove('open');
 });
 
 submitButton.addEventListener('click', () => {
+  hideModal();
+
   bookingPage.classList.remove('open');
 });
 
