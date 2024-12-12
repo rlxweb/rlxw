@@ -47,7 +47,7 @@ body::after {
 }
 
 header {
-  
+
   margin-bottom: 20px;
 }
 
@@ -115,6 +115,7 @@ h1 {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(18px);
   transform: scale(1.05);
+  outline: none;
 }
 
 .link-item.bookings {
@@ -136,11 +137,13 @@ h1 {
 
 .link-item.bookings:hover::before {
   left: 0;
+  outline: none;
 }
 
 .link-item.bookings:hover {
   color: #ffffff;
   transform: scale(1);
+  outline: none;
 }
 
 .booking-page {
