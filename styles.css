@@ -76,6 +76,23 @@ h1 {
   color: #CCC;
 }
 
+    #spotify-integration {
+      text-align: center;
+      background-color: #12121200;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    #spotify-integration h2 {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .spotify-player iframe {
+      border-radius: 12px;
+    }
+
 .link-list {
   margin-bottom: 20px;
   display: flex;
@@ -277,11 +294,6 @@ footer {
     font-size: 2.0em;
   }
 
-  .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
   .bio {
     font-size: 1.5em;
   }
@@ -316,11 +328,6 @@ footer {
 @media (max-width: 480px) {
   h1 {
     font-size: 1.5em;
-  }
-
-  .profile-img {
-    width: 100px;
-    height: 100px;
   }
 
   .bio {
