@@ -291,6 +291,12 @@ footer {
   h1 {
     font-size: 2.0em;
   }
+ #spotify-integration {
+      text-align: center;
+      background-color: #12121200;
+      margin: 0px auto;
+      width: 95%;
+    }
 
   .bio {
     font-size: 1.5em;
@@ -327,6 +333,12 @@ footer {
   h1 {
     font-size: 1.5em;
   }
+ #spotify-integration {
+      text-align: center;
+      background-color: #12121200;
+      margin: 0px auto;
+      width: 95%;
+    }
 
   .bio {
     font-size: 1.5em;
