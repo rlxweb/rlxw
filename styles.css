@@ -39,7 +39,6 @@ body::after {
   min-height: 100%; /* Allow the container to adjust height based on the screen */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Ensures the content stays centered vertically */
 }
 
 .no-scroll {
@@ -54,6 +53,7 @@ header {
 .profile-img {
   width: 150px;
   height: 150px;
+  position: relative; /* Ensure it's inside the scrolling area */
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 15px;
@@ -259,6 +259,7 @@ footer {
     opacity: 1;
   }
 }
+
 #bible-verse {
   font-family: 'Roboto Slab', serif;
   font-style: italic;
@@ -350,3 +351,4 @@ footer {
     width: 90%;
   }
 }
+
