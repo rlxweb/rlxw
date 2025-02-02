@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   background-color: #121212;
   font-family: 'Roboto', sans-serif;
@@ -63,6 +64,17 @@ header {
   -ms-user-drag: none;
   user-drag: none;
 }
+
+.click-spotifyframe-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+}
+
 
 h1 {
   font-size: 2.4em;

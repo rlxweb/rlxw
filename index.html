@@ -59,7 +59,7 @@
 
 
     <!-- Spotify Integration -->
-      <section id="spotify-integration">
+      <section id="spotify-integration" onclick="trackSpotifyLatestFrameClick()">
         <div class="spotify-player">
           <iframe src="https://open.spotify.com/embed/track/7u7ZX0hjRf4TLL8jJlpDLg?utm_source=generator" 
                   width="100%" 
@@ -68,6 +68,7 @@
                   allowfullscreen="" 
                   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
           </iframe>
+            <div class="click-spotifyframe-overlay"></div>
         </div>
       </section>
 
@@ -248,7 +249,13 @@ messageInput.addEventListener('input',() =>{updateCharacterCounter();} );
     }
   }
 
-
+function trackSpotifyLatestFrameClick() {
+    gtag('event', 'click_spotify_latest', { 
+        'event_category': 'Button', 
+        'event_label': 'Spotify button', 
+        'value': 1 
+    });
+}
   // Get the elements
 const bookingsButton = document.getElementById('bookings-button');
 const bookingPage = document.getElementById('booking-page');
