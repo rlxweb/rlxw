@@ -23,7 +23,7 @@ body::after {
   right: 0;
   bottom: 0;
   background: 
-    linear-gradient(to top, rgba(105, 0, 50, 1), rgba(1, 0, 140, 0)),
+    linear-gradient(to top, rgba(1, 0, 1, 1), rgba(1, 0, 1, 0)),
     url('lxpr.jpg');
   background-size: cover;
   background-position: center;
