@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: #121212;
   font-family: 'Roboto', sans-serif;
@@ -24,7 +23,7 @@ body::after {
   right: 0;
   bottom: 0;
   background: 
-    linear-gradient(to top, rgba(0, 0, 0, 1), rgba(1, 0, 0, 0)),
+    linear-gradient(to top, rgba(105, 0, 50, 1), rgba(1, 0, 140, 0)),
     url('lxpr.jpg');
   background-size: cover;
   background-position: center;
@@ -374,5 +373,25 @@ footer {
   .link-list {
     width: 90%;
   }
+}
+
+.link-item.spotify i {
+    color: #1DB954; 
+}
+
+.link-item.youtube i {
+    color: #FF0000; 
+}
+
+.link-item.apple-music i {
+    color: #FA57C1;
+}
+
+.link-item.instagram i {
+    color: #FF0000; 
+}
+
+.link-item.tiktok i {
+    color: #69C9D0; 
 }
 
